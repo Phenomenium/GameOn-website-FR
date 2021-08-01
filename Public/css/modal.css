@@ -68,11 +68,11 @@ img {
     color: #ffffff;
     border-radius: 15px;
 }
-
-.topnav a.active {
-    background-color: #ff0000;
-    color: #ffffff;
-    border-radius: 15px;
+/*--- Ajout du focus pour activer le hover au clic ---*/ 
+.topnav a.active:focus {
+  background-color: #ff0000;
+  color: #ffffff;
+  border-radius: 15px;
 }
 
 .topnav .icon {
@@ -619,7 +619,6 @@ footer {
     $ RESPONSIVE
 \*----------------------------------*/
 
-
 /* MEDIA QUERIES */
 
 /* MOBILE */
@@ -684,7 +683,7 @@ footer {
     width: 100%;
     flex-wrap: wrap;
     font-size: 1.5rem;
-/*    white-space: normal;*/
+    white-space: normal;
   }
 
   .hero-text {
