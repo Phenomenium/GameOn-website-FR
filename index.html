@@ -10,9 +10,8 @@
   </head>
     
   <body>
-      <!--- Ajout de la balise header et remplacement de la balise "DIV" par "NAV" --->
     <header>
-        <nav class="topnav responsive" id="myTopnav"><!--- ajout class responsive --->
+        <nav class="topnav" id="myTopnav"><!--- ajout class responsive --->
             <!--- LOGO --->
             <div class="header-logo">
                 <img alt="logo" src="./Public/img/Logo.png" />
@@ -48,7 +47,7 @@
         <!--- MODAL --->
         <div class="bground">
             <div class="content">
-                <span class="close"></span>
+                <span class="close" id="closeform"></span>
                 
                 <div class="modal-body"> 
                     <form name="reserve" action="index.html" method="get" onsubmit="return validate();">
