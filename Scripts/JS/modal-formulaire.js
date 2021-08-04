@@ -1,7 +1,7 @@
 /*----------------------------------*\
     $ DOM ELEMENTS MODAL
 \*----------------------------------*/
-
+/*--- déclaration des constantes (l'identifiant ne peux être réaffecté ou déclarée à nouveau contrairement à "let" car avec "const" on ne peut pas en re-déclarer une qui partage le même nom d'ou mon choix) et est en lecture seule, si le contenu de la constante est un objet, l'objet lui-même pourra toujours être modifié ---*/ 
 const firstName = document.getElementById('first');
 const lastName = document.getElementById('last');
 const email = document.getElementById('email');
