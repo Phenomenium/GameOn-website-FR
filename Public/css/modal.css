@@ -123,12 +123,6 @@ main {
     background: #3876ac;
 }
 
-.footer {
-    margin: 20px;
-    padding: 10px;
-    font-family: var(--font-slab);
-}
-
 /* Modal form */
 
 .btn-submit {
@@ -604,6 +598,7 @@ input[data-error]::after {
 /*----------------------------------*\
     $ FOOTER
 \*----------------------------------*/
+
 footer {
     font-family: var(--font-slab);/*--- Ajout de la Font ---*/
     padding-left: 2vw;
