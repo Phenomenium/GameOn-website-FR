@@ -107,12 +107,12 @@ function checkCheckBox() {
         return true;
 }
 
---- EVENEMENTS SUR CHAMPS DU FORMULAIRE
+//--- EVENEMENTS SUR CHAMPS DU FORMULAIRE
 
 function formFieldsValidation(element, method, event) {
     element.addEventListener(event, method);
 }
-/*--- ajout d'un évenement focus, lorsqu'un utilisateur saute dans l'un des éléments <input>, l'événement focus se produit et indique le champs ---*/
+/*--- ajout d'un évenement focus, lorsqu'un utilisateur saute dans l'un des éléments <input>, l'événement focus se produit et indique le champs à remplir ---*/
 formFieldsValidation(firstName, checkFirstName, 'focusout');
 formFieldsValidation(lastName, checkLastName, 'focusout');
 formFieldsValidation(email, checkEmail, 'focusout');
