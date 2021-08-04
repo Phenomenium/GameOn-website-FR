@@ -578,7 +578,7 @@ input[data-error]::after {
 .btn-signup {
     outline: none;
     /*    text-transform: capitalize;*/
-    text-transform: none;/*--- Modification car la transformation en "capitalize" centre  le teste ---*/
+    text-transform: none;/*--- Modification car la transformation en "capitalize" centre  le texte ---*/
     font-size: 1.3rem;
     padding: 15px 23px;
     margin: 0;
