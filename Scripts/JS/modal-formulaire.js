@@ -1,7 +1,8 @@
 /*----------------------------------*\
     $ DOM ELEMENTS MODAL
 \*----------------------------------*/
-/*--- déclaration des constantes (l'identifiant ne peux être réaffecté ou déclarée à nouveau contrairement à "let" car avec "const" on ne peut pas en re-déclarer une qui partage le même nom d'ou mon choix) et est en lecture seule, si le contenu de la constante est un objet, l'objet lui-même pourra toujours être modifié ---*/ 
+/*--- déclaration des constantes (l'identifiant ne peux être réaffecté ou déclarée à nouveau contrairement à "let" car avec "const" on ne peut pas en re-déclarer 
+une qui partage le même nom d'ou mon choix) et est en lecture seule, si le contenu de la constante est un objet, l'objet lui-même pourra toujours être modifié ---*/ 
 const firstName = document.getElementById('first');
 const lastName = document.getElementById('last');
 const email = document.getElementById('email');
@@ -44,7 +45,9 @@ function checkLastName() {
 }
 
 //--- EMAIL
-/*--- j'ai mis la "const re" pour les expressions régulières, mais comme on le sais c'est pas fiable à 100%, il faudrais compléter les expressions dans le code pour les adresses emails particulières de type phenomenium@pheno.conceptinfo ( /\S+@\S+\.\S+/ ). Cependant la meilleur validation pour les adresses mail reste l'envois d'un email de confirmation coté serveur ---*/
+/*--- j'ai mis la "const re" pour les expressions régulières, mais comme on le sais c'est pas fiable à 100%, il faudrais compléter les expressions dans le code 
+pour les adresses emails particulières de type phenomenium@pheno.conceptinfo ( /\S+@\S+\.\S+/ ). Cependant la meilleur validation pour les adresses mail reste 
+l'envois d'un email de confirmation coté serveur ---*/
 function checkEmail() {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (email.value.trim().match(re)) {
