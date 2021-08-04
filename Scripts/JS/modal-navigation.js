@@ -33,7 +33,7 @@ function launchModal() {
   modalbg.style.display = "block";
 }
 
- //Ajout fermeture du formulaire via la croix
+ // Ajout fermeture du formulaire via la croix
 function closeModal() {
   modalbg.style.display = 'none';
 }

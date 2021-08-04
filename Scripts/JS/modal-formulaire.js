@@ -44,7 +44,7 @@ function checkLastName() {
 }
 
 //--- EMAIL
-/*--- j'ai mis la "const re" pour les expressions régulières, mais comme on le c'est c'est pas fiable à 100%, il faudrais compléter les expressions dans le code pour les adresses emails particulières de type phenomenium@pheno.conceptinfo ( /\S+@\S+\.\S+/ ). Cependant la meilleur validation pour les adresses mail reste l'envois d'un email de confirmation coté serveur ---*/
+/*--- j'ai mis la "const re" pour les expressions régulières, mais comme on le sais c'est pas fiable à 100%, il faudrais compléter les expressions dans le code pour les adresses emails particulières de type phenomenium@pheno.conceptinfo ( /\S+@\S+\.\S+/ ). Cependant la meilleur validation pour les adresses mail reste l'envois d'un email de confirmation coté serveur ---*/
 function checkEmail() {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (email.value.trim().match(re)) {
