@@ -4,7 +4,7 @@
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
-//---> Ajout du btn close dans le dom
+//---> Ajout du btn close dans le DOM
 const closeBtn = document.getElementsByClassName('close');
 
 /*----------------------------------*\

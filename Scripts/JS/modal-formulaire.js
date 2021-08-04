@@ -10,7 +10,7 @@ const birthdate = document.getElementById('birthdate');
 const allLocations = document.getElementById('allLocations');
 const locations = document.querySelectorAll('#allLocations .checkbox-input');
 const checkbox1 = document.getElementById('checkbox1');
-//--- Ajout du constructeur pour la reconnaissance d'un modèle dans un texte
+//--- Ajout d'un constructeur pour la reconnaissance d'un modèle dans un texte
 const input = document.getElementsByClassName('text-control');
 const form = document.getElementById('form');
 const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/;
@@ -44,10 +44,9 @@ function checkLastName() {
 }
 
 //--- EMAIL
-
+/*--- j'ai mis la "const re" pour les expressions régulières, mais comme on le c'est c'est pas fiable à 100%, il faudrais compléter les expressions dans le code pour les adresses emails particulières de type phenomenium@pheno.conceptinfo ( /\S+@\S+\.\S+/ ). Cependant la meilleur validation pour les adresses mail reste l'envois d'un email de confirmation coté serveur ---*/
 function checkEmail() {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    /*--- j'ai mis la "const re" pour les expressions régulières, mais comme on le c'est c'est pas fiable à 100%, il faudrais compléter les expressions dans le code pour les adresses emails particulières de type phenomenium@pheno.conceptinfo ( /\S+@\S+\.\S+/ ). Cependant la meilleur validation pour les adresses mail reste l'envois d'un email de confirmation coté serveur ---*/
     if (email.value.trim().match(re)) {
         email.parentElement.setAttribute('data-error-visible', 'false');
         email.style.border = '6px solid #279e7a';
@@ -76,7 +75,7 @@ function checkBirthdate() {
 function checkTournamentsQuantity() {
     if (quantity.value.trim().length === 0 || isNaN(quantity.value.trim()) === true || quantity.value.trim() < 0) {
         quantity.parentElement.setAttribute('data-error-visible', 'true');
-        quantity.style.border = 'px solid #ff0000';
+        quantity.style.border = '6px solid #ff0000';
         return false;
     }
         quantity.parentElement.setAttribute('data-error-visible', 'false');
@@ -109,11 +108,10 @@ function checkCheckBox() {
 }
 
 //--- EVENEMENTS SUR CHAMPS DU FORMULAIRE
-
+/*--- ajout d'un évenement focus, lorsqu'un utilisateur saute dans l'un des éléments <input>, l'événement focus se produit et indique le champs à remplir ---*/
 function formFieldsValidation(element, method, event) {
     element.addEventListener(event, method);
 }
-/*--- ajout d'un évenement focus, lorsqu'un utilisateur saute dans l'un des éléments <input>, l'événement focus se produit et indique le champs à remplir ---*/
 formFieldsValidation(firstName, checkFirstName, 'focusout');
 formFieldsValidation(lastName, checkLastName, 'focusout');
 formFieldsValidation(email, checkEmail, 'focusout');
