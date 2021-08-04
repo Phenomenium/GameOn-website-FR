@@ -39,13 +39,13 @@ function closeModal() {
 }
 closeBtn[0].addEventListener('click', closeModal);
 
-/*----- OU 2ème solution avec un ID rajouter dans la balise HTML span -----*/
+/*----- OU 2ème solution avec un ID rajouter dans la balise HTML span -------*/
 
 //function closeModal() {
 //  modalbg.style.display = "none";
 //}
 //document.getElementById("closeform").addEventListener("click", closeModal);
 
-/*--------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
 
 	

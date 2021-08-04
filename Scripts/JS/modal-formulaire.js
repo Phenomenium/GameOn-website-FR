@@ -1,6 +1,7 @@
 /*----------------------------------*\
     $ DOM ELEMENTS MODAL
 \*----------------------------------*/
+
 const firstName = document.getElementById('first');
 const lastName = document.getElementById('last');
 const email = document.getElementById('email');
@@ -25,10 +26,10 @@ function checkFirstName() {
         firstName.parentElement.setAttribute('data-error-visible', 'true');
         firstName.style.border = '6px solid #ff0000';
         return false;
-    }
-    first.parentElement.setAttribute('data-error-visible', 'false');
-    first.style.border = '6px solid #279e7a';
-    return true;
+    } 
+        first.parentElement.setAttribute('data-error-visible', 'false');
+        first.style.border = '6px solid #279e7a';
+        return true;
 }
 
 function checkLastName() {
@@ -37,12 +38,13 @@ function checkLastName() {
         lastName.style.border = '6px solid #ff0000';
         return false;
     }
-    last.parentElement.setAttribute('data-error-visible', 'false');
-    last.style.border = '6px solid #279e7a';
-    return true;
+        last.parentElement.setAttribute('data-error-visible', 'false');
+        last.style.border = '6px solid #279e7a';
+        return true;
 }
 
 //--- EMAIL
+
 function checkEmail() {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (email.value.trim().match(re)) {
@@ -50,36 +52,39 @@ function checkEmail() {
         email.style.border = '6px solid #279e7a';
         return true;
     }
-    email.parentElement.setAttribute('data-error-visible', 'true');
-    email.style.border = '6px solid #ff0000';
-    return false;
+        email.parentElement.setAttribute('data-error-visible', 'true');
+        email.style.border = '6px solid #ff0000';
+        return false;
 }
 
 //--- DATE NAISSANCE
+
 function checkBirthdate() {
     if (birthdate.value.trim().length !== 10) {
         birthdate.parentElement.setAttribute('data-error-visible', 'true');
         birthdate.style.border = '6px solid #ff0000';
         return false;
     }
-    birthdate.parentElement.setAttribute('data-error-visible', 'false');
-    birthdate.style.border = '6px solid #279e7a';
-    return true;
+        birthdate.parentElement.setAttribute('data-error-visible', 'false');
+        birthdate.style.border = '6px solid #279e7a';
+        return true;
 }
 
 //--- NOMBRE DE TOURNOIS
+
 function checkTournamentsQuantity() {
     if (quantity.value.trim().length === 0 || isNaN(quantity.value.trim()) === true || quantity.value.trim() < 0) {
         quantity.parentElement.setAttribute('data-error-visible', 'true');
         quantity.style.border = 'px solid #ff0000';
         return false;
     }
-    quantity.parentElement.setAttribute('data-error-visible', 'false');
-    quantity.style.border = '6px solid #279e7a';
-    return true;
+        quantity.parentElement.setAttribute('data-error-visible', 'false');
+        quantity.style.border = '6px solid #279e7a';
+        return true;
 }
 
 //--- VILLES
+
 function checkLocations() {
     allLocations.setAttribute('data-error-visible', 'true');
     for (let i = 0; i < locations.length; i++) {
@@ -88,23 +93,26 @@ function checkLocations() {
             return true;
         }
     }
-    return false;
+        return false;
 }
 
 //--- TERME D'UTILISATION
+
 function checkCheckBox() {
     if (checkbox1.checked === false) {
         checkbox1.parentElement.setAttribute('data-error-visible', 'true');
         return false;
     }
-    checkbox1.parentElement.setAttribute('data-error-visible', 'false');
-    return true;
+        checkbox1.parentElement.setAttribute('data-error-visible', 'false');
+        return true;
 }
 
-//--- EVENEMENTS SUR CHAMPS DU FORMULAIRE
+--- EVENEMENTS SUR CHAMPS DU FORMULAIRE
+
 function formFieldsValidation(element, method, event) {
     element.addEventListener(event, method);
 }
+/*--- ajout d'un évenement focus, lorsqu'un utilisateur saute dans l'un des éléments <input>, l'événement focus se produit et indique le champs ---*/
 formFieldsValidation(firstName, checkFirstName, 'focusout');
 formFieldsValidation(lastName, checkLastName, 'focusout');
 formFieldsValidation(email, checkEmail, 'focusout');
@@ -114,6 +122,7 @@ formFieldsValidation(allLocations, checkLocations, 'change');
 formFieldsValidation(checkbox1, checkCheckBox, 'change');
 
 //--- VALIDATION DES CHAMPS DU FORMULAIRE
+
 function forAllFieldsValidation() {
     checkFirstName()
     checkLastName()
@@ -138,6 +147,7 @@ function formValidation() {
 }
 
 //--- FONCTION SUR BTN ENVOI DU FORMULAIRE
+
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (formValidation() == true) {
