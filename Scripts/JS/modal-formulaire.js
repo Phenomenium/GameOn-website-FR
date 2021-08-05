@@ -111,7 +111,7 @@ function checkCheckBox() {
 }
 
 //--- EVENEMENTS SUR CHAMPS DU FORMULAIRE
-/*--- ajout d'un évenement focus, lorsqu'un utilisateur saute dans l'un des éléments <input>, l'événement focus se produit et indique le champs à remplir ---*/
+/*--- ajout d'un évenement focus, lorsqu'un utilisateur saute l'un des éléments <input>, l'événement focus se produit et indique le champs à remplir ---*/
 function formFieldsValidation(element, method, event) {
     element.addEventListener(event, method);
 }

@@ -37,6 +37,8 @@ function launchModal() {
 function closeModal() {
   modalbg.style.display = 'none';
 }
+/*--- j'aurai pu faire l'action sur le "close-btn" avec un querySelector mais j'ai fais ça à l'ancienne je dirais 
+comme j'ai appris à l'époque :), mais l'essentiel c'est que celà fonctionne ---*/
 closeBtn[0].addEventListener('click', closeModal);
 
 /*----- OU 2ème solution avec un ID rajouter dans la balise HTML span -------*/
