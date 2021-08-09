@@ -51,14 +51,14 @@
             <div class="content">
                 <span class="close"></span>
             <div class="modal-body">
-            <!--- FORMULAIRE --->
-            <form id="form" name="reserve" action="index.html" method="get">
-                <!--- PRENOM --->
-                <div class="formData" data-error="Vous devez entrer 2 caractères ou plus." data-error-visible="false">
-                    <label for="first">Prénom</label><br>
-                    <input class="text-control success" type="text" id="first" name="first" minlength="2"
-                    placeholder="Prénom" /><br>
-                </div>
+                <!--- FORMULAIRE --->
+                <form id="form" name="reserve" action="index.html" method="get">
+                    <!--- PRENOM --->
+                    <div class="formData" data-error="Vous devez entrer 2 caractères ou plus." data-error-visible="false">
+                        <label for="first">Prénom</label><br>
+                        <!--- Suppréssion du control du nombre minimun de caractères dans la balise input et ajout du control en javascript --->
+                        <input class="text-control success" type="text" id="first" name="first" placeholder="Prénom" /><br>
+                    </div>
                 <!--- NOM --->
                 <div class="formData" data-error="Vous devez entrer 2 caractères ou plus." data-error-visible="false">
                     <label for="last">Nom</label><br>
@@ -99,23 +99,16 @@
                     <label class="checkbox-label" for="location6"><span class="checkbox-icon"></span>Portland</label>
                 </div>
                 
-            <!--- CONDITION D'UTILISATION --->
-            <div class="formData" data-error="Vous devez accepter les conditions d'utilisation."
-              data-error-visible="false">
-              <input class="checkbox-input" type="checkbox" id="checkbox1" />
-              <label class="checkbox2-label" for="checkbox1">
-                <span class="checkbox-icon"></span>
-                J'ai lu et accepté les conditions d'utilisation.
-              </label>
-              <br>
-              <input class="checkbox-input" type="checkbox" id="checkbox2" />
-              <label class="checkbox2-label" for="checkbox2">
-                <span class="checkbox-icon"></span>
-                Je souhaite être prévenu des prochains évènements.
-              </label>
-              <br>
-            </div>
-            <input class="btn-submit" type="submit" value="C'est parti" />
+                <!--- CONDITION D'UTILISATION --->
+                <div class="formData" data-error="Vous devez accepter les conditions d'utilisation." data-error-visible="false">
+                    <input class="checkbox-input" type="checkbox" id="checkbox1" />
+                    <label class="checkbox2-label" for="checkbox1"><span class="checkbox-icon"></span>J'ai lu et accepté les conditions d'utilisation.</label>
+                <br>
+                    <input class="checkbox-input" type="checkbox" id="checkbox2" />
+                    <label class="checkbox2-label" for="checkbox2"><span class="checkbox-icon"></span>Je souhaite être prévenu des prochains évènements.</label>
+                <br>
+                </div>
+                <input class="btn-submit" type="submit" value="C'est parti" />
           </form>
         </div>
       </div>
