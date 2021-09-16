@@ -59,28 +59,28 @@
                         <!--- Suppréssion du control du nombre minimun de caractères dans la balise input et ajout du control en javascript --->
                         <input class="text-control success" type="text" id="first" name="first" placeholder="Prénom" /><br>
                     </div>
-                <!--- NOM --->
-                <div class="formData" data-error="Vous devez entrer 2 caractères ou plus." data-error-visible="false">
-                    <label for="last">Nom</label><br>
-                    <input class="text-control" type="text" id="last" name="last" placeholder="Nom" /><br>
-                </div>
-                <!--- EMAIL --->
-                <div class="formData" data-error="Vous devez entrer une adresse email valide." data-error-visible="false">
-                    <label for="email">E-mail</label><br>
-                    <input class="text-control" type="email" id="email" name="email" placeholder="exemple@email.com" /><br>
-                </div>
-                <!--- DATE ANNIVERSAIRE --->
-                <div class="formData" data-error="Vous devez entrer votre date de naissance." data-error-visible="false">
-                    <label for="birthdate">Date de naissance</label><br>
-                    <input class="text-control" type="date" id="birthdate" name="birthdate" /><br>
-                </div>
-                <!--- NOMBRE DE TOURNOIS --->
-                <div class="formData" data-error="Veuillez saisir une valeur numérique." data-error-visible="false">
-                    <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
+                    <!--- NOM --->
+                    <div class="formData" data-error="Vous devez entrer 2 caractères ou plus." data-error-visible="false">
+                        <label for="last">Nom</label><br>
+                        <input class="text-control" type="text" id="last" name="last" placeholder="Nom" /><br>
+                    </div>
+                    <!--- EMAIL --->
+                    <div class="formData" data-error="Vous devez entrer une adresse email valide." data-error-visible="false">
+                        <label for="email">E-mail</label><br>
+                        <input class="text-control" type="email" id="email" name="email" placeholder="exemple@email.com" /><br>
+                    </div>
+                    <!--- DATE ANNIVERSAIRE --->
+                    <div class="formData" data-error="Vous devez entrer votre date de naissance." data-error-visible="false">
+                        <label for="birthdate">Date de naissance</label><br>
+                        <input class="text-control" type="date" id="birthdate" name="birthdate" /><br>
+                    </div>
+                    <!--- NOMBRE DE TOURNOIS --->
+                    <div class="formData" data-error="Veuillez saisir une valeur numérique." data-error-visible="false">
+                        <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                     <!--- J'ai enlevé la contrainte min="0" max="99" car si la personne à participer à plus de 99 tournois ??? --->
                     <!--- J'ai modifier le type pour enlever les flêches dans la case tournois ---->
-                    <input type="numero" class="text-control" id="quantity" name="quantity" placeholder="0">
-                </div>
+                        <input type="numero" class="text-control" id="quantity" name="quantity" placeholder="0">
+                    </div>
                 <!--- VILLES --->
                 <p class="text-label">Quelles villes ?</p>
                 <div class="formData" id="allLocations" data-error="Veuillez sélectionner une ville."
